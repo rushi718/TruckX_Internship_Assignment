@@ -5,15 +5,16 @@ Every time when new camera logs in new object is created and stored, which handl
 After logging out the camera object is removed from the storage ( marked as offline ). 
 
 Camera class implements interface for dealing with information sent by each camera and implements following methods
+ * update_location
+ * invoke_alarms
+ * upload_video
 
-update_location
-invoke_alarms
-upload_video
 
 These methods connect with data base and update data base with given info about the camera. 
 
 AdminUI class implements API so that Administrator UI can get the alarms of particular camera. It takes id (IMEI ) of camera for which the info is required. AdminUI class implements the following methods.
-get_alarms
-get_alarms_filter
-get_recorded_videos
-send_command
+
+* get_alarms
+* get_alarms_filter
+* get_recorded_videos
+* send_command
